@@ -9,6 +9,12 @@
 (define-constant ERROR-ACCESS-PERIOD-EXPIRED (err u5))
 (define-constant ERROR-INVALID-INPUT (err u6))
 
+;; Public variables
+(define-data-var contract-administrator principal tx-sender)
+(define-data-var minimum-required-permission uint u1)
+(define-data-var maximum-allowed-permission uint u5)
+
+
 ;; Data maps
 (define-map registered-users 
     principal 
